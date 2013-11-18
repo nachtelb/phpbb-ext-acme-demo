@@ -1,13 +1,13 @@
 <?php
 /**
 *
-* @package phpBB Extension - Acme Demo
+* @package phpBB Extension - nachtelb/imprint
 * @copyright (c) 2013 phpBB Group
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 *
 */
 
-namespace acme\demo\event;
+namespace nachtelb\imprint\event;
 
 /**
 * @ignore
@@ -49,7 +49,7 @@ class main_listener implements EventSubscriberInterface
 	{
 		$lang_set_ext = $event['lang_set_ext'];
 		$lang_set_ext[] = array(
-			'ext_name' => 'acme/demo',
+			'ext_name' => 'nachtelb/imprint',
 			'lang_set' => 'common',
 		);
 		$event['lang_set_ext'] = $lang_set_ext;
@@ -58,7 +58,7 @@ class main_listener implements EventSubscriberInterface
 	public function add_page_header_link($event)
 	{
 		$this->template->assign_vars(array(
-			'U_DEMO_PAGE'	=> $this->helper->url('demo/world'),
+			'U_IMPRINT_PAGE'	=> $this->helper->url('imprint'),
 		));
 	}
 }

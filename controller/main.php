@@ -1,13 +1,13 @@
 <?php
 /**
 *
-* @package phpBB Extension - Acme Demo
+* @package phpBB Extension - nachtelb/imprint
 * @copyright (c) 2013 phpBB Group
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 *
 */
 
-namespace acme\demo\controller;
+namespace nachtelb\imprint\controller;
 
 /**
 * @ignore
@@ -34,15 +34,15 @@ class main
 	}
 
 	/**
-	* Demo controller for route /demo/{name}
+	* Demo controller for route /imprint/{name}
 	*
 	* @param string		$name
 	* @return Symfony\Component\HttpFoundation\Response A Symfony Response object
 	*/
 	public function handle($name)
 	{
-		$this->template->assign_var('DEMO_NAME', $name);
+		$this->template->assign_var('imprint', $name);
 
-		return $this->helper->render('demo_body.html', $name);
+		return $this->helper->render('imprint.html', $name);
 	}
 }

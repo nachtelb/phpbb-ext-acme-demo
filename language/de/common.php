@@ -18,5 +18,5 @@ if (empty($lang) || !is_array($lang))
 }
 
 $lang = array_merge($lang, array(
-	'IMPRINT_PAGE'			=> 'Imprint',
+	'IMPRINT_PAGE'			=> 'Impressum',
 ));
