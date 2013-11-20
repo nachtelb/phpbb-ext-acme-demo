@@ -2,8 +2,10 @@ services:
     nachtelb.imprint.controller:
         class: nachtelb\imprint\controller\main
         arguments:
-            - @template
+            - @config
             - @controller.helper
+            - @template
+            - @user
     nachtelb.imprint.listener:
         class: nachtelb\imprint\event\main_listener
         arguments:
